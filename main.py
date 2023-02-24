@@ -1,4 +1,5 @@
 import cv2
+import subprocess
 
 # Capture video from USB webcam
 cap = cv2.VideoCapture(0)
@@ -32,6 +33,8 @@ while True:
     # Draw rectangles around the detected faces
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        # Display notification when face is detected
+        subprocess.run(['notify-send', 'Face Detected', 'A face has been detected on Pi camera'])
 
     # Add a text label showing ther current brightness level
     text = f'Brightness: {brightness:.1f}'
