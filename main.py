@@ -27,12 +27,15 @@ while True:
     # Show the current frame in a window
     cv2.imshow('Live Video Feed', frame)
 
+    # Wait for a key press
+    key = cv2.waitKey(1)
+
     # Exit the loop if the 'q' key is pressed
-    if cv2.waitKey(1) == ord('q'):
+    if key == ord('q'):
         break
 
     # Increase the brightness if the '+' key is pressed
-    elif cv2.waitKey(1) == ord('+'):
+    if key == ord('1'):
         brightness += 0.1
         if brightness > 1.0:
             brightness = 1.0
@@ -40,7 +43,7 @@ while True:
         text = f'Brightness: {brightness:.1f}'
 
     # Decrease the brightness if the '-' key is pressed
-    elif cv2.waitKey(1) == ord('-'):
+    if key == ord('2'):
         brightness -= 0.1
         if brightness < 0.0:
             brightness = 0.0
