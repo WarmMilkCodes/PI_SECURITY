@@ -22,7 +22,7 @@ while True:
 
     # Add a text label showing ther current brightness level
     text = f'Brightness: {brightness:.1f}'
-    cv2.putText(frame, text, (10,30), cv2.FRONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+    cv2.putText(frame, text, (10,30), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,255), 2)
 
     # Show the current frame in a window
     cv2.imshow('Live Video Feed', frame)
