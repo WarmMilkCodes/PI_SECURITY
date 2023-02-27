@@ -41,7 +41,7 @@ while True:
     cv2.putText(frame, text, (10,30), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,255), 2)
 
     # Show the current frame in a window
-    cv2.imshow('Cox Security Video Feed', frame)
+    cv2.imshow('Security Video Feed', frame)
 
     # Wait for a key press
     key = cv2.waitKey(1)
